@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Marcellus';
+		font-style: normal;
+		font-weight: 400;
+		font-display: block; /* This property will help us not flash unstyled text for a couple hundred milliseconds, and then it would act like font-display: swap */
+		src: url('/fonts/marcellus.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Grand Slang';
+		font-style: normal;
+		font-weight: 400;
+		font-display: block;
+		src: url('/fonts/grandslang.woff2') format('woff2');
+	}
+}

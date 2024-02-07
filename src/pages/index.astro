@@ -1,13 +1,15 @@
 ---
+import Container from '../components/Container.astro';
 import Info from '../components/Info.astro';
 import Nav from '../components/Nav.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Elena Cibaja - Diseñadora de Interiores" description="Diseño de interiores ...">
-	<main>
-		<Info />
-		<Nav />
-	</main>
+	<Container>
+		<main>
+			<Info />
+			<Nav />
+		</main>
+	</Container>
 </Layout>
-
