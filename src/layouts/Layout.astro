@@ -1,6 +1,6 @@
 ---
-import Header from '../components/Header.astro';
-import Wrapper from '../components/Wrapper.astro';
+import NavLeft from '../components/NavLeft.astro';
+import Container from '../components/Container.astro';
 import '../styles/main.css';
 
 interface Props {
@@ -20,14 +20,19 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
 	</head>
-	<body class="font-marcellus antialiased text-main font-light bg-secondary relative">
-		<Wrapper>
-			<Header />
+	<body class="font-marcellus antialiased text-main bg-secondary">
+		<div class="background bg-blue" style="height: 0vh; width: 375px;"></div>
+		<Container>
+			<NavLeft />
 			<slot />
-		</Wrapper>
+		</Container>
 	</body>
 </html>
 <style is:global>
+	* {
+		box-sizing: border-box;
+	}
+
 	:root {
 		--text-main: 'Marcellus SC', serif;
 		--text-secondary: 'Grand Slang', sans-serif;
@@ -36,10 +41,23 @@ const { title, description } = Astro.props;
 		--color-tertiary: #f2dad8;
 		--color-secondary-d: #a69286;
 		--color-tertiary-d: #bf9793;
+
+		view-transition-name: root;
 	}
 	html {
 		font-family: system-ui, sans-serif;
+		height: 100%;
+		size-adjust: 100%;
+		display: block;
 	}
+
+	body{
+		font-size: 12px;
+		line-height: 20px;
+		margin: 0;
+		display: block;
+	}
+
 	code {
 		font-family:
 			Menlo,
@@ -50,5 +68,23 @@ const { title, description } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+
+	::selection {
+		background-color: var(--color-main);
+		color: var(--color-secondary);
+	}
+
+	.background {
+		z-index: 700;
+		top: auto;
+		bottom: 0%;
+		left: 0%;
+		right: 0%;
+	}
+
+	.background.bg-blue {
+		background-color: var(--color-main);
+		position: fixed;
 	}
 </style>

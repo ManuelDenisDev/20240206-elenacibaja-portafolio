@@ -1,0 +1,140 @@
+<section class="">
+	<nav class="">
+		<ul>
+			<li>
+				<a href="#" class="font-grandslang hover:-skew-x-6 hover:translate-x-4 hover:text-tertiaryd duration-300 delay-100">Sobre Mi</a>
+			</li>
+			<li>
+				<a href="#" class="font-grandslang hover:-skew-x-6 hover:translate-x-4 hover:text-tertiaryd duration-300 delay-100">Servicios</a>
+			</li>
+			<li>
+				<a href="#" class="font-grandslang hover:-skew-x-6 hover:translate-x-4 hover:text-tertiaryd duration-300 delay-100">Portafolio</a>
+			</li>
+			<li>
+				<a href="#" class="font-grandslang hover:-skew-x-6 hover:translate-x-4 hover:text-tertiaryd duration-300 delay-100">Contacto</a>
+			</li>
+		</ul>
+	</nav>
+</section>
+
+<style>
+	section {
+		width: 65%;
+		height: 90vh;
+		float: right;
+		display: grid;
+		grid-column-gap: 16px;
+		grid-row-gap: 16px;
+		text-align: center;
+		grid-template-rows: auto auto;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-columns: 1fr;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		padding-top: 5vh;
+		position: relative;
+		top: 0%;
+		bottom: 0%;
+		left: auto;
+		right: 0%;
+	}
+	@media screen and (max-width: 991px) {
+		section {
+			width: 100%;
+			height: auto;
+			padding-top: 0;
+			display: block;
+		}
+	}
+	@media screen and (max-width: 767px) {
+		section {
+			padding-top: 2vh;
+		}
+	}
+	@media screen and (max-width: 479px) {
+		section {
+			padding-top: 0;
+		}
+	}
+
+	nav {
+		text-align: left;
+		padding-top: 10%;
+		padding-left: 6%;
+	}
+
+	@media screen and (max-width: 991px) {
+		nav {
+			padding-top: 10%;
+			padding-left: 0%;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		nav {
+			padding-top: 2%;
+		}
+	}
+
+	@media screen and (max-width: 479px) {
+		nav {
+			padding-top: 10%;
+		}
+	}
+
+	li {
+		text-align: right;
+		padding-right: 5%;
+		display: inline-block;
+		position: relative;
+	}
+
+	@media screen and (max-width: 991px) {
+		li {
+			padding-bottom: 2%;
+			display: block;
+		}
+	}
+
+	@media screen and (max-width: 479px) {
+		li {
+			padding-bottom: 4%;
+		}
+	}
+
+	a {
+		z-index: 100;
+		color: var(--color-main);
+		text-align: left;
+		text-transform: uppercase;
+		border: 0 solid var(--color-main);
+		font-size: 8vw;
+		font-weight: 300;
+		line-height: 0.95em;
+		text-decoration: none;
+
+		display: block;
+		position: relative;
+	}
+
+	@media screen and (max-width: 991px) {
+		a {
+			letter-spacing: -5px;
+			font-size: 12vw;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		a {
+			letter-spacing: -1px;
+		}
+	}
+
+	@media screen and (max-width: 479px) {
+		a {
+			font-size: 12vw;
+		}
+	}
+</style>

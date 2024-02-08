@@ -1,15 +1,54 @@
 ---
-import Container from '../components/Container.astro';
-import Info from '../components/Info.astro';
-import Nav from '../components/Nav.astro';
+import SectionLeft from '../components/SectionLeft.astro';
+import SectionRight from '../components/SectionRight.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Elena Cibaja - Diseñadora de Interiores" description="Diseño de interiores ...">
-	<Container>
-		<main>
-			<Info />
-			<Nav />
-		</main>
-	</Container>
+	<main class="wrapper w-clearfix">
+		<SectionLeft />
+		<SectionRight />
+	</main>
 </Layout>
+
+<style>
+	.wrapper {
+		max-width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 10%;
+		padding-right: 5%;
+		position: relative;
+	}
+
+	@media screen and (max-width: 991px) {
+		.wrapper {
+			max-width: 80%;
+			padding-left: 5%;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		.wrapper {
+			max-width: 100%;
+			padding-left: 10%;
+			padding-right: 10%;
+		}
+	}
+
+	@media screen and (max-width: 479px) {
+		.wrapper {
+			padding-bottom: 10%;
+		}
+	}
+
+	.w-clearfix::before,
+	.w-clearfix::after {
+		content: '';
+		display: table;
+	}
+
+	.w-clearfix::after {
+		clear: both;
+	}
+</style>
