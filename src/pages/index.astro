@@ -1,5 +1,5 @@
 ---
-import NavLeft from '../components/NavLeft.astro';
+import NavLeftIndex from '../components/NavLeft/NavLeftIndex.astro';
 import SectionLeft from '../components/SectionLeft.astro';
 import SectionRight from '../components/SectionRight.astro';
 import Layout from '../layouts/Layout.astro';
@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Elena Cibaja - Diseñadora de Interiores" description="Diseño de interiores ...">
 	<div class="mandendev-wrapper">
-		<NavLeft />
+		<NavLeftIndex />
 		<main class="mandendev-main-container">
 			<SectionLeft />
 			<SectionRight />
@@ -21,7 +21,7 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.mandendev-main-container {
-		@apply max-w-[90%] ml-auto mr-auto pl-[10%] pr-[5%] relative;
+		@apply max-w-[100%] ml-auto mr-auto pl-[10%] pr-[5%] relative;
 		@apply max-lg:max-w-[80%] max-lg:pl-[5%];
 		@apply max-md:max-w-full px-[10%];
 		@apply max-sm:pb-[10%];

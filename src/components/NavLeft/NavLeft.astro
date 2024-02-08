@@ -1,0 +1,46 @@
+<aside class="mandendev-aside">
+	<li class="mandendev-aside-li">
+		<a href="/" class="mandendev-aside-li-a">HOME</a>
+	</li>
+	<span class="mandendev-aside-li-line"></span>
+	<span class="mandendev-aside-li mandendev-aside-li-copyright"><strong class="mandendev-copyright">@/2024</strong></span>
+</aside>
+
+<style>
+	.mandendev-aside {
+		@apply z-[600] w-[6%] h-full flex flex-col justify-start items-center pt-[5%] pb-8 fixed;
+		@apply max-lg:w-[10%] max-lg:pl-[2px];
+		@apply max-md:w-full max-md:h-auto max-md:flex-row max-md:justify-between max-md:pb-0 max-md:pl-0 max-md:static;
+		@apply max-sm:px-[7%];
+	}
+
+	.mandendev-aside-li {
+		@apply flex-initial mb-10 pl-5 pr-4 -rotate-90 list-none;
+		@apply max-md:mb-0 max-md:rotate-0;
+		@apply max-sm:text-center max-sm:px-[10px];
+	}
+
+	.mandendev-aside-li > a {
+		@apply cursor-pointer hover:line-through;
+	}
+	.mandendev-aside-li-a {
+		@apply text-center tracking-[5px] text-xs font-medium transition-opacity duration-300 block;
+	}
+
+	.mandendev-aside-li-line {
+		@apply w-[1px] h-[100px] bg-main mt-[10px] mb-[80px];
+		@apply max-md:w-[100px] max-md:h-[1px] max-md:mt-0 max-md:mb-0;
+		@apply max-sm:w-[40px] max-sm:ml-[7px] max-sm:mr-[17px] max-sm:pr-0;
+	}
+
+	.mandendev-aside-li-copyright {
+		@apply w-[110px] absolute top-auto bottom-[3vh];
+		@apply max-md:bottom-auto max-md:top-auto max-md:relative;
+		@apply max-sm:bottom-auto max-sm:top-auto max-sm:px-0;
+	}
+
+	.mandendev-copyright {
+		@apply text-center tracking-[4px] text-xs font-medium;
+		@apply max-md:text-right;
+	}
+</style>

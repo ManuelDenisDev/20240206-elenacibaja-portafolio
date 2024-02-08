@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavLeft from '../components/NavLeft/NavLeft.astro';
+---
+
+<Layout title="Sobre Mi | Elena Cibaja - Diseñadora de Interiores" description="Diseño de interiores ...">
+	<div class="mandendev-wrapper">
+		<NavLeft />
+		<main class="mandendev-main-container">
+			<article class="mandendev-main-article">
+				<figure class="mandendev-article-figure">
+					<img class="mandendev-article-img" src="/imagenes/elena-cibaja-foto-perfil.jpg" alt="Elena Cibaja - Diseñadora de Interiores" />
+				</figure>
+				<h1 class="mandendev-article-h1">Sobre Mi</h1>
+				<p class="mandendev-article-p">
+					<span class="mandendev-article-span"> ¡Hola! Soy Elena Cibaja, diseñadora de interiores y decoradora. </span>
+					<br />
+					<br />
+					Me apasiona el diseño de interiores y la decoración, y me encanta ayudar a las personas a crear espacios que reflejen su personalidad y estilo
+					de vida.
+					<br />
+					<br />
+					Desde que era niña, siempre me ha encantado el diseño y la decoración. Me encantaba redecorar mi habitación y ayudar a mis amigos y familiares
+					a hacer lo mismo. Después de estudiar diseño de interiores y trabajar en la industria durante varios años, decidí abrir mi propio estudio de
+					diseño de interiores y decoración.
+					<br />
+					<br />
+					En mi estudio, me especializo en crear espacios que sean funcionales, hermosos y que reflejen la personalidad y el estilo de vida de mis clientes.
+					Me encanta trabajar con mis clientes para entender sus necesidades y deseos, y luego crear un diseño que cumpla con sus expectativas y presupuesto.
+					<br />
+					<br />
+					<span class="mandendev-article-span"
+						>"Mi prioridad es concentrarme en aquello que mejore la calidad de vida de las personas, que la haga estar más sanas y ser más felices."</span
+					>
+					<br />
+					<br />
+					En mi tiempo libre, me encanta explorar nuevas tendencias de diseño, visitar ferias de diseño y decoración, y viajar para inspirarme con nuevas
+					<br />
+					<br />
+					Si estás buscando un diseñador de interiores y decorador que te ayude a crear el espacio de tus sueños, ¡no dudes en ponerte en contacto conmigo!
+					Estoy aquí para ayudarte a hacer realidad tus ideas y crear un espacio que amarás durante años.
+					<br />
+					<br />
+					¡Espero poder trabajar contigo pronto!
+					<br />
+					<br />
+					<br />
+					<br />
+				</p>
+				<h3 class="mandendev-article-h3">Experiencia</h3>
+				<p class="mandendev-article-p">
+					<span> 2015 - Presente: </span> Diseñadora de interiores y decoradora en mi propio estudio de diseño de interiores y decoración.
+					<br />
+					<span> 2012 - 2015: </span> Diseñadora de interiores y decoradora en una empresa de diseño de interiores y decoración.
+					<br />
+					<span> 2009 - 2012: </span> Diseñadora de interiores y decoradora en una empresa de diseño de interiores y decoración.
+					<br />
+					<span> 2006 - 2009: </span> Diseñadora de interiores y decoradora en una empresa de diseño de interiores y decoración.
+					<br />
+					<br />
+					<br />
+					<br />
+				</p>
+				<h3 class="mandendev-article-h3">Educación</h3>
+				<p class="mandendev-article-p">
+					<span> 2003 - 2006: </span> Licenciatura en Diseño de Interiores y Decoración, Universidad de Barcelona.
+					<br />
+					<span> 2000 - 2003: </span> Técnico Superior en Diseño de Interiores y Decoración, Escuela de Arte y Diseño de Barcelona.
+					<br />
+					<br />
+				</p>
+				<a class="mandendev-article-button" href="#">My CV</a>
+				<br />
+				<br />
+				<br />
+				<br />
+				<h3 class="mandendev-article-h3">Habilidades</h3>
+				<p class="mandendev-article-p">
+					<span> Diseño de interiores: </span> Creación de planos, selección de mobiliario, iluminación, textiles y accesorios.
+					<br />
+					<span> Decoración: </span> Creación de ambientes, selección de colores, texturas y estilos.
+					<br />
+					<span> Software: </span> AutoCAD, SketchUp, 3ds Max, V-Ray, Photoshop, Illustrator, InDesign.
+					<br />
+					<span> Idiomas: </span> Español, Inglés, Francés.
+					<br />
+					<br />
+				</p>
+				<a class="mandendev-article-button" href="/contacto">¿Hablamos?</a>
+			</article>
+		</main>
+
+		<style>
+			.mandendev-wrapper {
+				@apply z-[500px] relative;
+			}
+
+			.mandendev-main-container {
+				@apply max-w-[100%] ml-auto mr-auto pl-[10%] pr-[5%] relative;
+				@apply max-lg:max-w-[80%] max-lg:pl-[5%];
+				@apply max-md:max-w-full px-[10%];
+				@apply max-sm:pb-[10%];
+			}
+			.mandendev-main-article {
+				@apply flex items-start flex-col justify-center h-auto max-w-3xl pt-[10%] pb-[12%] relative;
+				@apply max-lg:w-full max-lg:static max-lg:h-auto max-lg:pt-[30%];
+				@apply max-md:pt-[20%];
+			}
+
+			.mandendev-article-img {
+				@apply overflow-clip border-0 max-w-full align-middle block absolute top-0 left-auto bottom-0 right-0 aspect-[4/5] object-cover w-[50%];
+				@apply max-lg:w-[40%] mt-[5%] ml-0 mr-[10%] top-0 left-0 bottom-0 right-[10%];
+				@apply max-md:w-[35%] mr-[-5%] top-0 left-auto bottom-0 right-0;
+			}
+			.mandendev-article-h1 {
+				@apply pt-[5%] overflow-hidden block text-[14vw] text-nowrap leading-[1em] tracking-[-3px] font-light mt-[52px] mx-0 mb-[35px] relative font-grandslang text-left;
+			}
+			.mandendev-article-p {
+				@apply text-[1.2em] tracking-[-0.5px] text-left max-w-[90%] mb-0 ml-0 mr-0 text-sm block relative font-normal leading-[1.9em];
+				@apply max-lg:max-w-[100%];
+			}
+			.mandendev-article-span {
+				@apply font-light block leading-[1.3em] text-[36px] font-grandslang;
+			}
+			.mandendev-article-h3 {
+				@apply text-left tracking-[4px] uppercase my-0 font-grandslang text-xl font-medium leading-7 relative;
+			}
+			.mandendev-article-button {
+				@apply inline-block border-0 cursor-pointer tracking-[1px] bg-main text-secondary rounded-[50px] py-5 px-[60px] font-grandslang text-xl font-normal transition-all duration-300;
+				@apply hover:px-[100px];
+			}
+		</style>
+	</div>
+</Layout>
