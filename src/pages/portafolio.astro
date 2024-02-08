@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavLeft from '../components/NavLeft/NavLeft.astro';
+---
+
+<Layout title="Portafolio | Elena Cibaja - Diseñadora de Interiores" description="Diseño de interiores ...">
+	<div class="mandendev-wrapper">
+		<NavLeft />
+		<main class="mandendev-main-container">
+			<article class="mandendev-main-article">
+				<h1 class="mandendev-article-h1">Portafolio</h1>
+
+				<style>
+					.mandendev-wrapper {
+						@apply z-[500px] relative;
+					}
+
+					.mandendev-main-container {
+						@apply max-w-[100%] ml-auto mr-auto pl-[10%] pr-[5%] relative;
+						@apply max-lg:max-w-[80%] max-lg:pl-[5%];
+						@apply max-md:max-w-full px-[10%];
+						@apply max-sm:pb-[10%];
+					}
+					.mandendev-main-article {
+						@apply flex items-start flex-col justify-center h-auto max-w-3xl pt-[10%] pb-[12%] relative;
+						@apply max-lg:w-full max-lg:static max-lg:h-auto max-lg:pt-[30%];
+						@apply max-md:pt-[20%];
+					}
+
+					.mandendev-article-img {
+						@apply overflow-clip border-0 max-w-full align-middle block absolute top-0 left-auto bottom-0 right-0 aspect-[4/5] object-cover w-[50%];
+						@apply max-lg:w-[40%] mt-[5%] ml-0 mr-[10%] top-0 left-0 bottom-0 right-[10%];
+						@apply max-md:w-[35%] mr-[-5%] top-0 left-auto bottom-0 right-0;
+					}
+					.mandendev-article-h1 {
+						@apply pt-[5%] overflow-hidden block text-[14vw] text-nowrap leading-[1em] tracking-[-3px] font-light mt-[52px] mx-0 mb-[35px] relative font-grandslang text-left;
+					}
+					.mandendev-article-p {
+						@apply text-[1.2em] tracking-[-0.5px] text-left max-w-[90%] mb-0 ml-0 mr-0 text-sm block relative font-normal leading-[1.9em];
+						@apply max-lg:max-w-[100%];
+					}
+					.mandendev-article-span {
+						@apply font-light block leading-[1.3em] text-[36px] font-grandslang;
+					}
+					.mandendev-article-h3 {
+						@apply text-left tracking-[4px] uppercase my-0 font-grandslang text-xl font-medium leading-7 relative;
+					}
+					.mandendev-article-button {
+						@apply inline-block border-0 cursor-pointer tracking-[1px] bg-main text-secondary rounded-[50px] py-5 px-[60px] font-grandslang text-xl font-normal transition-all duration-300;
+						@apply hover:px-[100px];
+					}
+				</style>
+			</article>
+		</main>
+	</div></Layout
+>
