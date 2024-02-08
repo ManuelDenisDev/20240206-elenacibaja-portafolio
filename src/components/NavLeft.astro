@@ -1,164 +1,52 @@
-<ul class="nav-left">
-	<li class="nav-left-item hover:line-through">
-		<a href="#" class="nav-left-link">IN</a>
+<aside class="mandendev-aside">
+	<li class="mandendev-aside-li">
+		<a href="#" class="mandendev-aside-li-a">IN</a>
 	</li>
-	<li class="nav-left-item hover:line-through">
-		<a href="#" class="nav-left-link">LI</a>
+	<li class="mandendev-aside-li">
+		<a href="#" class="mandendev-aside-li-a">LI</a>
 	</li>
-	<li class="nav-left-item hover:line-through">
-		<a href="#" class="nav-left-link">PI</a>
+	<li class="mandendev-aside-li">
+		<a href="#" class="mandendev-aside-li-a">PI</a>
 	</li>
-	<span class="nav-line"></span>
-	<span class="nav-left-item nav-copyright"><strong class="copyright">@/2024</strong></span>
-</ul>
+	<span class="mandendev-aside-li-line"></span>
+	<span class="mandendev-aside-li mandendev-aside-li-copyright"><strong class="mandendev-copyright">@/2024</strong></span>
+</aside>
 
 <style>
-	.nav-left {
-		z-index: 600;
-		width: 6%;
-		height: 100vh;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-		padding-top: 5%;
-		padding-bottom: 30px;
-		display: flex;
-		position: fixed;
+	.mandendev-aside {
+		@apply z-[600] w-[6%] h-full flex flex-col justify-start items-center pt-[5%] pb-8 fixed;
+		@apply max-lg:w-[10%] max-lg:pl-[2px];
+		@apply max-md:w-full max-md:h-auto max-md:flex-row max-md:justify-between max-md:pb-0 max-md:pl-0;
+		@apply max-sm:px-[7%];
 	}
 
-	@media screen (max-width: 991px) {
-		.nav-left {
-			width: 10%;
-			padding-left: 6px;
-		}
+	.mandendev-aside-li {
+		@apply flex-initial mb-10 pl-5 pr-4 -rotate-90 list-none;
+		@apply max-md:mb-0 max-md:rotate-0;
+		@apply max-sm:text-center max-sm:px-[10px];
 	}
 
-	@media screen and (max-width: 767px) {
-		.nav-left {
-			width: 100%;
-			height: auto;
-			flex-direction: row;
-			justify-content: space-between;
-			padding-bottom: 0;
-			padding-left: 0;
-		}
+	.mandendev-aside-li > a {
+		@apply cursor-pointer hover:line-through;
+	}
+	.mandendev-aside-li-a {
+		@apply text-center tracking-[5px] text-xs font-medium transition-opacity duration-300 block;
 	}
 
-	@media screen and (max-width: 479px) {
-		.nav-left {
-			padding-left: 7%;
-			padding-right: 7%;
-		}
+	.mandendev-aside-li-line {
+		@apply w-[1px] h-[100px] bg-main mt-[10px] mb-[80px];
+		@apply max-md:w-[100px] max-md:h-[1px] max-md:mt-0 max-md:mb-0;
+		@apply max-sm:w-[40px] max-sm:ml-[7px] max-sm:mr-[17px] max-sm:pr-0;
 	}
 
-	.nav-left-item {
-		flex: 0 auto;
-		margin-bottom: 40px;
-		padding-left: 20px;
-		padding-right: 15px;
-		transform: rotate(-90deg);
+	.mandendev-aside-li-copyright {
+		@apply w-[110px] absolute top-auto bottom-[3vh];
+		@apply max-md:bottom-auto max-md:top-auto max-md:relative;
+		@apply max-sm:bottom-auto max-sm:top-auto max-sm:px-0;
 	}
 
-	@media screen and (max-width: 767px) {
-		.nav-left-item {
-			margin-bottom: 0;
-			transform: rotate(0);
-		}
-	}
-
-	@media screen and (max-width: 479px) {
-		.nav-left-item {
-			text-align: center;
-			padding-left: 10px;
-			padding-right: 10px;
-		}
-	}
-
-	.nav-left-link {
-		text-align: center;
-		letter-spacing: 5px;
-		border: 0 solid var(--color-main);
-		font-size: 10px;
-		font-weight: 500;
-		transition: opacity 0.3s;
-		display: block;
-	}
-
-	a {
-		cursor: pointer;
-	}
-	.nav-line {
-		width: 1px;
-		height: 100px;
-		background-color: var(--color-main);
-		margin-top: 10px;
-		margin-bottom: 80px;
-	}
-
-	@media screen and (max-width: 767px) {
-		.nav-line {
-			width: 100px;
-			height: 2px;
-
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-	}
-
-	@media screen and (max-width: 479px) {
-		.nav-line {
-			width: 40px;
-			margin-left: 7px;
-			margin-right: 17px;
-			padding-right: 0;
-		}
-	}
-
-	.nav-left-item.nav-copyright {
-		width: 110px;
-		position: absolute;
-		top: auto;
-		bottom: 3vh;
-	}
-
-	@media screen and (max-width: 1024px) {
-		.nav-left-item.nav-copyright {
-		}
-	}
-
-	@media screen and (max-width: 991px) {
-		.nav-left-item.nav-copyright {
-		}
-	}
-
-	@media screen and (max-width: 767px) {
-		.nav-left-item.nav-copyright {
-			position: relative;
-			bottom: auto;
-			top: auto;
-		}
-	}
-
-	@media screen and (max-width: 479px) {
-		.nav-left-item.nav-copyright {
-			position: relative;
-			bottom: auto;
-			top: auto;
-			padding-left: 0;
-			padding-right: 0;
-		}
-	}
-
-	.copyright {
-		text-align: center;
-		letter-spacing: 4px;
-		font-size: 10px;
-		font-weight: 500;
-	}
-
-	@media screen and (max-width: 767px) {
-		.copyright {
-			text-align: right;
-		}
+	.mandendev-copyright {
+		@apply text-center tracking-[4px] text-xs font-medium;
+		@apply max-md:text-right;
 	}
 </style>

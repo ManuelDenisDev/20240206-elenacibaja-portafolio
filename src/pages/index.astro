@@ -1,54 +1,29 @@
 ---
+import NavLeft from '../components/NavLeft.astro';
 import SectionLeft from '../components/SectionLeft.astro';
 import SectionRight from '../components/SectionRight.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Elena Cibaja - Diseñadora de Interiores" description="Diseño de interiores ...">
-	<main class="wrapper w-clearfix">
-		<SectionLeft />
-		<SectionRight />
-	</main>
+	<div class="mandendev-wrapper">
+		<NavLeft />
+		<main class="mandendev-main-container">
+			<SectionLeft />
+			<SectionRight />
+		</main>
+	</div>
 </Layout>
 
 <style>
-	.wrapper {
-		max-width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: 10%;
-		padding-right: 5%;
-		position: relative;
+	.mandendev-wrapper {
+		@apply z-[500px] relative;
 	}
 
-	@media screen and (max-width: 991px) {
-		.wrapper {
-			max-width: 80%;
-			padding-left: 5%;
-		}
-	}
-
-	@media screen and (max-width: 767px) {
-		.wrapper {
-			max-width: 100%;
-			padding-left: 10%;
-			padding-right: 10%;
-		}
-	}
-
-	@media screen and (max-width: 479px) {
-		.wrapper {
-			padding-bottom: 10%;
-		}
-	}
-
-	.w-clearfix::before,
-	.w-clearfix::after {
-		content: '';
-		display: table;
-	}
-
-	.w-clearfix::after {
-		clear: both;
+	.mandendev-main-container {
+		@apply max-w-[90%] ml-auto mr-auto pl-[10%] pr-[5%] relative;
+		@apply max-lg:max-w-[80%] max-lg:pl-[5%];
+		@apply max-md:max-w-full px-[10%];
+		@apply max-sm:pb-[10%];
 	}
 </style>

@@ -20,19 +20,11 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
 	</head>
-	<body class="font-marcellus antialiased text-main bg-secondary">
-		<div class="background bg-blue" style="height: 0vh; width: 375px;"></div>
-		<Container>
-			<NavLeft />
-			<slot />
-		</Container>
+	<body class="mandendev-body">
+		<slot />
 	</body>
 </html>
 <style is:global>
-	* {
-		box-sizing: border-box;
-	}
-
 	:root {
 		--text-main: 'Marcellus SC', serif;
 		--text-secondary: 'Grand Slang', sans-serif;
@@ -44,6 +36,7 @@ const { title, description } = Astro.props;
 
 		view-transition-name: root;
 	}
+
 	html {
 		font-family: system-ui, sans-serif;
 		height: 100%;
@@ -51,40 +44,12 @@ const { title, description } = Astro.props;
 		display: block;
 	}
 
-	body{
-		font-size: 12px;
-		line-height: 20px;
-		margin: 0;
-		display: block;
-	}
-
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-
 	::selection {
 		background-color: var(--color-main);
 		color: var(--color-secondary);
 	}
 
-	.background {
-		z-index: 700;
-		top: auto;
-		bottom: 0%;
-		left: 0%;
-		right: 0%;
-	}
-
-	.background.bg-blue {
-		background-color: var(--color-main);
-		position: fixed;
+	.mandendev-body {
+		@apply bg-secondary text-main font-marcellus antialiased leading-5 m-0 block;
 	}
 </style>
